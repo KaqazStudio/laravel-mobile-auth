@@ -1,0 +1,63 @@
+{
+    "name": "kaqazstudio/laravel-mobile-auth",
+    "description": "simple mobile authentication for laravel framework.",
+    "keywords": [
+        "kaqaz studio",
+        "laravel mobile auth",
+        "mobile auth",
+        "hex",
+        "armin hooshmand"
+    ],
+    "homepage": "https://github.com/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "kaqaz studio",
+            "email": "dev@kaqaz.studio",
+            "homepage": "https://kaqaz.studio",
+            "role": "company"
+        },
+        {
+            "name": "armin hooshmand",
+            "email": "hex@kaqaz.studio",
+            "homepage": "https://hex.kaqaz.studio",
+            "role": "developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "illuminate/support": ">=6",
+        "doctrine/dbal": "^3.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8"
+    },
+    "autoload": {
+        "psr-4": {
+            "KaqazStudio\\LaravelMobileAuth\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "KaqazStudio\\LaravelMobileAuth\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "extra": {
+        "laravel": {
+            "providers" : [
+                "KaqazStudio\\LaravelMobileAuth\\ServiceProvider\\LaravelMobileAuthServiceProvider",
+                "KaqazStudio\\LaravelMobileAuth\\ServiceProvider\\LaravelMobileAuthRouteServiceProvider"
+            ],
+            "aliases": {
+                "LaravelMobileAuth": "KaqazStudio\\LaravelMobileAuth\\Facade\\LaravelMobileAuthFacade"
+            }
+        }
+    }
+}
