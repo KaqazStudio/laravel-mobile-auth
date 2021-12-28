@@ -29,6 +29,7 @@ class LaravelMobileAuthServiceProvider extends ServiceProvider
     {
         $this->_loadRoutes();
         $this->_loadViews();
+        $this->_loadStyles();
         $this->_loadMigrations();
     }
 
@@ -44,6 +45,13 @@ class LaravelMobileAuthServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../resources/views' => resource_path('views/vendor/LaravelMobileAuth')
         ],'laravel-mobile-auth-views');
+    }
+
+    private function _loadStyles(): void
+    {
+        $this->publishes([
+            __DIR__.'/../resources/css' => resource_path('css/vendor/LaravelMobileAuth')
+        ], 'laravel-mobile-auth-styles');
     }
 
     private function _loadMigrations(): void

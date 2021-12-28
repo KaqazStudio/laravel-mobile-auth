@@ -46,7 +46,7 @@
                         </svg>
                     </a>
                 </label>
-                <input class="bg-slate-50 border border-slate-100 rounded px-2 py-2 dana-400 text-sm text-gray-700"
+                <input class="bg-slate-50 border bg-rose-500 border-slate-100 rounded px-2 py-2 dana-400 text-sm text-gray-700"
                        value="{{ Session::get('phone', old('phone')) }}"
                        placeholder="09123456789"
                        readonly
